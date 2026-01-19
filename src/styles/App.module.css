@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #0F172A;
+  --bg-card: #1E293B;
+  --accent-gold: #F59E0B;
+  --accent-teal: #06B6D4;
+  --text-light: #F1F5F9;
+  --text-muted: #94A3B8;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Ajuste para WelcomeScreen ocupar toda a altura */
+.app > * {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  padding: 12px 20px;
+  background: rgba(15, 23, 42, 0.95);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-shadow: 
+    2px 2px 0px rgba(0, 0, 0, 0.8);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Responsividade para footer */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.8rem;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+  }
+}

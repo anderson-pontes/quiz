@@ -1,0 +1,133 @@
+.musicControls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.95);
+  padding: 8px 12px;
+  border-radius: 0;
+  border-bottom: 2px solid var(--pixel-gold, #F59E0B);
+  border-right: 2px solid var(--pixel-gold, #F59E0B);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(245, 158, 11, 0.3);
+  max-width: fit-content;
+  width: auto;
+}
+
+.musicButton {
+  background: var(--pixel-bg-card, #1E293B);
+  border: 2px solid var(--pixel-gold, #F59E0B);
+  color: var(--pixel-text, #F1F5F9);
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  flex-shrink: 0;
+}
+
+.musicButton:hover {
+  background: var(--pixel-gold, #F59E0B);
+  transform: scale(1.1);
+  box-shadow: 
+    0 0 10px rgba(245, 158, 11, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.musicButton:active {
+  transform: scale(0.95);
+}
+
+.volumeControl {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.volumeLabel {
+  font-size: 0.9rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.volumeSlider {
+  width: 60px;
+  height: 4px;
+  background: var(--pixel-bg-card, #1E293B);
+  border: 1px solid var(--pixel-teal, #06B6D4);
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  flex-shrink: 0;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--pixel-gold, #F59E0B);
+  border: 2px solid var(--pixel-text, #F1F5F9);
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+}
+
+.volumeSlider::-webkit-slider-thumb:hover {
+  background: var(--pixel-teal, #06B6D4);
+  transform: scale(1.2);
+}
+
+.volumeSlider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--pixel-gold, #F59E0B);
+  border: 2px solid var(--pixel-text, #F1F5F9);
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+}
+
+.volumeSlider::-moz-range-thumb:hover {
+  background: var(--pixel-teal, #06B6D4);
+  transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .musicControls {
+    top: 0;
+    left: 0;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+  
+  .musicButton {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+  
+  .volumeLabel {
+    font-size: 0.8rem;
+  }
+  
+  .volumeSlider {
+    width: 50px;
+    height: 3px;
+  }
+}

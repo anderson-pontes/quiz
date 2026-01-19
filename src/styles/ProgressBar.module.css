@@ -1,0 +1,179 @@
+/* Variáveis de cores - tema pixel art */
+:root {
+  --pixel-bg-dark: #0F172A;
+  --pixel-bg-card: #1E293B;
+  --pixel-gold: #F59E0B;
+  --pixel-teal: #06B6D4;
+  --pixel-text: #F1F5F9;
+  --pixel-accent: #FFD700;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 16px;
+  background-color: rgba(15, 23, 42, 0.95);
+  border: 4px solid var(--pixel-teal);
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 
+    4px 4px 0px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(6, 182, 212, 0.4),
+    inset 0 3px 6px rgba(0, 0, 0, 0.6);
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(6, 182, 212, 0.15) 2px,
+      rgba(6, 182, 212, 0.15) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(245, 158, 11, 0.08) 2px,
+      rgba(245, 158, 11, 0.08) 4px
+    );
+  /* Efeito scanline retrô */
+  background-blend-mode: overlay;
+}
+
+/* Efeito de grid pixel art no track */
+.progressTrack::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 0px,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, 
+    var(--pixel-teal) 0%, 
+    var(--pixel-accent) 30%,
+    var(--pixel-gold) 60%,
+    var(--pixel-accent) 100%);
+  border-radius: 0;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  box-shadow: 
+    inset 0 3px 6px rgba(255, 255, 255, 0.4),
+    0 0 25px rgba(245, 158, 11, 0.7),
+    0 0 15px rgba(6, 182, 212, 0.5),
+    2px 2px 0px rgba(0, 0, 0, 0.3);
+  animation: pixelPulse 2.5s ease-in-out infinite;
+  /* Efeito de pixelização no preenchimento */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Padrão de pixels no preenchimento */
+.progressFill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.1) 3px,
+      rgba(255, 255, 255, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 3px
+    );
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Efeito de brilho animado estilo pixel art */
+.progressFill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    transparent 100%);
+  animation: pixelShine 3s ease-in-out infinite;
+  z-index: 3;
+}
+
+/* Animação de pulso estilo jogo retrô */
+@keyframes pixelPulse {
+  0%, 100% {
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.4),
+      0 0 25px rgba(245, 158, 11, 0.7),
+      0 0 15px rgba(6, 182, 212, 0.5),
+      2px 2px 0px rgba(0, 0, 0, 0.3);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.5),
+      0 0 35px rgba(245, 158, 11, 0.9),
+      0 0 20px rgba(6, 182, 212, 0.7),
+      3px 3px 0px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+  }
+}
+
+/* Animação de brilho estilo pixel art */
+@keyframes pixelShine {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+/* Efeito de borda interna para profundidade pixel art */
+.progressFill {
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para manter o tema pixel art */
+@media (max-width: 480px) {
+  .progressTrack {
+    height: 14px;
+    border-width: 3px;
+  }
+}
