@@ -43,7 +43,7 @@ function App() {
   };
 
   const handleBackFromChallengeSelection = () => {
-    setCurrentScreen('selection');
+    setCurrentScreen('welcome');
   };
 
   const handleExitChallenge = () => {
@@ -53,7 +53,11 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <BackgroundMusic autoPlay={true} volume={0.3} />
+      <BackgroundMusic
+        autoPlay={true}
+        volume={0.3}
+        showControls={currentScreen === 'welcome'}
+      />
       {currentScreen === 'welcome' ? (
         <WelcomeScreen
           onStartSelection={handleStartSelection}

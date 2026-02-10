@@ -5,11 +5,13 @@ import musicFile from '../assets/public/Super Mario Bros (NES) Music - Overworld
 interface BackgroundMusicProps {
   autoPlay?: boolean;
   volume?: number;
+  showControls?: boolean;
 }
 
 const BackgroundMusic: React.FC<BackgroundMusicProps> = ({
   autoPlay = true,
-  volume = 0.3
+  volume = 0.3,
+  showControls = true
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isEnabled, setIsEnabled] = useState(() => {
@@ -73,7 +75,11 @@ const BackgroundMusic: React.FC<BackgroundMusicProps> = ({
     }
     
     if (isPlaying) {
-      stopMusic();
+      // Pausa sem voltar para o início, para continuar de onde parou
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+      setIsPlaying(false);
     } else {
       await startMusic();
     }
@@ -167,23 +173,17 @@ const BackgroundMusic: React.FC<BackgroundMusicProps> = ({
     };
   }, []);
 
-  // Auto-play quando habilitado e usuário já interagiu
-  useEffect(() => {
-    if (autoPlay && isEnabled && !isPlaying && userInteractedRef.current && audioRef.current) {
-      const timer = setTimeout(() => {
-        startMusic();
-      }, 100);
-      
-      return () => clearTimeout(timer);
-    }
-  }, [autoPlay, isEnabled, isPlaying]);
-
   // Atualiza volume quando mudar
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = currentVolume;
     }
   }, [currentVolume]);
+  
+  if (!showControls) {
+    // Mantém a música e efeitos, mas sem renderizar os controles na tela
+    return null;
+  }
 
   return (
     <div className={styles.musicControls}>
