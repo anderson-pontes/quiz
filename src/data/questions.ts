@@ -326,52 +326,10 @@ export const questions: Question[] = [
     correctAnswer: 1,
     explanation: 'Caifás foi o sumo sacerdote que presidiu o julgamento de Jesus e o condenou à morte.',
     level: 'Difícil'
-  },
-  {
-    id: 36,
-    category: 'Bíblia',
-    question: 'Quantos anos durou o reinado de Salomão?',
-    options: ['30 anos', '40 anos', '50 anos', '60 anos'],
-    correctAnswer: 1,
-    explanation: 'Salomão reinou por 40 anos em Israel, de aproximadamente 970 a 930 a.C.',
-    level: 'Difícil'
-  },
-  {
-    id: 37,
-    category: 'Bíblia',
-    question: 'Qual profeta foi arrebatado ao céu em um carro de fogo?',
-    options: ['Elias', 'Enoque', 'Ezequiel', 'Eliseu'],
-    correctAnswer: 0,
-    explanation: 'Elias foi arrebatado ao céu em um redemoinho, enquanto Eliseu observava um carro de fogo e cavalos de fogo.',
-    level: 'Difícil'
-  },
-  {
-    id: 38,
-    category: 'Bíblia',
-    question: 'Quantos capítulos tem o livro de Salmos?',
-    options: ['148 capítulos', '149 capítulos', '150 capítulos', '151 capítulos'],
-    correctAnswer: 2,
-    explanation: 'O livro de Salmos contém exatamente 150 capítulos, sendo o maior livro da Bíblia.',
-    level: 'Difícil'
-  },
-  {
-    id: 39,
-    category: 'Bíblia',
-    question: 'Qual foi o nome do lugar onde Jesus foi traído por Judas?',
-    options: ['Monte das Oliveiras', 'Getsêmani', 'Gólgota', 'Betânia'],
-    correctAnswer: 1,
-    explanation: 'Getsêmani foi o jardim no monte das Oliveiras onde Jesus foi traído por Judas e preso.',
-    level: 'Difícil'
-  },
-  {
-    id: 40,
-    category: 'Bíblia',
-    question: 'Quantos anos durou o cativeiro babilônico de Judá?',
-    options: ['60 anos', '70 anos', '80 anos', '90 anos'],
-    correctAnswer: 1,
-    explanation: 'O cativeiro babilônico durou 70 anos, conforme profetizado por Jeremias, terminando quando Ciro permitiu o retorno dos judeus.',
-    level: 'Difícil'
-  },
+  },  
+  
+  
+ 
   // Perguntas de Teoria Musical - Fácil (IDs 41-50)
   {
     id: 41,
@@ -1096,5 +1054,113 @@ export const questions: Question[] = [
     correctAnswer: 0,
     explanation: 'Rúben aconselhou seus irmãos a não matarem José, mas a lançá-lo numa cisterna, planejando salvá-lo depois (Gênesis 37:21-22).',
     level: 'Médio'
+  },
+  {
+    id: 121,
+    category: 'Bíblia',
+    question: 'Qual rei teve lepra até a morte por não buscar ao Senhor?',
+    options: ['Uzias', 'Asa', 'Jorão', 'Jeú'],
+    correctAnswer: 1,
+    explanation: 'Asa, mesmo doente, confiou apenas nos médicos e não buscou ao Senhor.',
+    level: 'Difícil'
+  },
+  {
+    id: 122,
+    category: 'Bíblia',
+    question: 'Qual rei viu o sol retroceder como sinal de Deus?',
+    options: ['Josias', 'Ezequias', 'Acabe', 'Manassés'],
+    correctAnswer: 1,
+    explanation: 'Deus fez a sombra do sol voltar dez graus como sinal da cura de Ezequias.',
+    level: 'Difícil'
+  },
+  {
+    id: 123,
+    category: 'Bíblia',
+    question: 'Qual rei foi humilhado e passou a viver como animal por um tempo?',
+    options: ['Dario', 'Belsazar', 'Nabucodonosor', 'Ciro'],
+    correctAnswer: 2,
+    explanation: 'Por orgulho, Nabucodonosor foi afastado do convívio humano até reconhecer o poder de Deus.',
+    level: 'Difícil'
+  },
+  {
+    id: 124,
+    category: 'Bíblia',
+    question: 'Qual profeta chorou tanto por Jerusalém que ficou conhecido como "o profeta chorão"?',
+    options: ['Isaías', 'Jeremias', 'Ezequiel', 'Oséias'],
+    correctAnswer: 1,
+    explanation: 'Jeremias lamentou profundamente a destruição de Jerusalém.',
+    level: 'Difícil'
+  },
+  {
+    id: 125,
+    category: 'Bíblia',
+    question: 'Qual profeta viu um vale cheio de ossos secos que ganharam vida?',
+    options: ['Isaías', 'Jeremias', 'Daniel', 'Ezequiel'],
+    correctAnswer: 3,
+    explanation: 'Deus mostrou a Ezequiel que Israel, mesmo "morto espiritualmente", seria restaurado.',
+    level: 'Difícil'
+  },
+  {
+    id: 126,
+    category: 'Bíblia',
+    question: 'Qual profeta casou com uma mulher infiel por ordem de Deus?',
+    options: ['Amós', 'Oséias', 'Jonas', 'Miqueias'],
+    correctAnswer: 1,
+    explanation: 'O casamento simbolizava a infidelidade de Israel a Deus.',
+    level: 'Difícil'
+  },
+  {
+    id: 127,
+    category: 'Bíblia',
+    question: 'Qual rei morreu comendo grama como boi por causa do orgulho?',
+    options: ['Ciro', 'Dario', 'Nabucodonosor', 'Belsazar'],
+    correctAnswer: 2,
+    explanation: 'Deus o humilhou até ele reconhecer que o Altíssimo governa.',
+    level: 'Difícil'
+  },
+  {
+    id: 128,
+    category: 'Bíblia',
+    question: 'Quem escreveu o livro de Atos dos Apóstolos?',
+    options: ['Pedro', 'Paulo', 'João', 'Lucas'],
+    correctAnswer: 3,
+    explanation: 'Lucas também escreveu o Evangelho de Lucas.',
+    level: 'Difícil'
+  },
+  {
+    id: 129,
+    category: 'Bíblia',
+    question: 'Quem foi mordido por uma serpente e curado ao olhar para a serpente de bronze?',
+    options: ['Moisés', 'Arão', 'O povo de Israel', 'Josué'],
+    correctAnswer: 2,
+    explanation: 'Quem olhava para a serpente de bronze era curado.',
+    level: 'Difícil'
+  },
+  {
+    id: 130,
+    category: 'Bíblia',
+    question: 'Quem foi alimentado por corvos no deserto?',
+    options: ['Eliseu', 'Elias', 'Jeremias', 'João Batista'],
+    correctAnswer: 1,
+    explanation: 'Deus enviou corvos com pão e carne.',
+    level: 'Difícil'
+  },
+  {
+    id: 131,
+    category: 'Bíblia',
+    question: 'O que aconteceu com os rapazes que zombaram da calvície do profeta Eliseu?',
+    options: ['Ficaram todos calvos instantaneamente', 'Ficaram mudos para sempre', 'Foram atacados por duas ursas', 'Foram engolidos pela terra'],
+    correctAnswer: 2,
+    explanation: 'Então subiram do bosque duas ursas e despedaçaram quarenta e dois daqueles rapazes.',
+    level: 'Difícil'
+  },
+  {
+    id: 132,
+    category: 'Bíblia',
+    question: 'Qual era a profissão de Lucas, o autor de um dos Evangelhos e do livro de Atos dos Apóstolos?',
+    options: ['Pescador', 'Médico', 'Fabricante de tendas', 'Cobrador de impostos'],
+    correctAnswer: 1,
+    explanation: 'Saúda-vos Lucas, o médico amado, e Demas.',
+    level: 'Difícil'
   }
 ];
