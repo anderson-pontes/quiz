@@ -10,9 +10,13 @@ import {
 
 interface WelcomeScreenProps {
   onStartSelection: () => void;
+  onOpenChallengeSelection: () => void;
 }
 
-const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStartSelection }) => {
+const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
+  onStartSelection,
+  onOpenChallengeSelection
+}) => {
   return (
     <div className={styles.welcomeContainer}>
       {/* Personagens decorativos de fundo */}
@@ -39,8 +43,9 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStartSelection }) => {
         <div className={styles.header}>
           <h1 className={styles.title}>2º Encontro</h1>
           <h2 className={styles.subtitle}>Musical e Bíblico</h2>
+          <h3 className={styles.subtitle}>CCB</h3>
           <p className={styles.organization}>
-            Organização Centro Novo e Santa Luzia do Paruá
+            Organização: Centro Novo e Santa Luzia do Paruá
           </p>
         </div>
 
@@ -52,13 +57,23 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStartSelection }) => {
         </div>
 
         <div className={styles.actionSection}>
-          <button
-            className={styles.startButton}
-            onClick={onStartSelection}
-          >
-            <span className={styles.buttonText}>INICIAR QUIZ</span>
-            <span className={styles.buttonGlow}></span>
-          </button>
+          <div className={styles.buttonsRow}>
+            <button
+              className={styles.startButton}
+              onClick={onStartSelection}
+            >
+              <span className={styles.buttonText}>INICIAR QUIZ</span>
+              <span className={styles.buttonGlow}></span>
+            </button>
+            <button
+              className={`${styles.startButton} ${styles.secondaryButton}`}
+              type="button"
+              onClick={onOpenChallengeSelection}
+            >
+              <span className={styles.buttonText}>MODO DESAFIOS</span>
+              <span className={styles.buttonGlow}></span>
+            </button>
+          </div>
           <p className={styles.hint}>
             Teste seus conhecimentos sobre Bíblia e Música!
           </p>

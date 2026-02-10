@@ -511,6 +511,24 @@
   max-width: 600px;
 }
 
+.challengeLinkButton {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: var(--pixel-text);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  position: relative;
+  z-index: 2;
+}
+
+.challengeLinkButton:hover {
+  color: var(--pixel-teal);
+  opacity: 1;
+}
+
 
 /* Tablet e telas médias */
 @media (max-width: 768px) {

@@ -1,0 +1,141 @@
+@import './QuizContainer.module.css';
+
+.challengeContainer {
+  composes: quizContainer from './QuizContainer.module.css';
+}
+
+.header {
+  composes: header from './QuizContainer.module.css';
+}
+
+.typeBadge {
+  composes: categoryBadge from './QuizContainer.module.css';
+}
+
+.exitBtn {
+  composes: exitBtn from './QuizContainer.module.css';
+}
+
+.footer {
+  composes: footer from './QuizContainer.module.css';
+}
+
+.submitBtn {
+  composes: submitBtn from './QuizContainer.module.css';
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-shadow:
+    3px 3px 0px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(245, 158, 11, 0.6);
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.promptEmoji {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.promptText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.answerBox {
+  margin-top: 16px;
+  background-color: rgba(6, 182, 212, 0.15);
+  border: 3px solid var(--accent-teal);
+  border-left-width: 6px;
+  padding: 16px;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-shadow:
+    1px 1px 0px rgba(0, 0, 0, 0.8);
+  box-shadow:
+    3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
+.answerReference {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--accent-teal);
+}
+
+.buttonsRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.secondaryBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 0;
+  border: 3px solid var(--accent-teal);
+  background: rgba(15, 23, 42, 0.8);
+  color: var(--accent-teal);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow:
+    3px 3px 0px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow:
+    2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.secondaryBtn:hover {
+  transform: translate(2px, 2px);
+  box-shadow:
+    1px 1px 0px rgba(0, 0, 0, 0.8);
+}
+
+.secondaryBtn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.progressWrapper {
+  margin: 16px 0 24px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-light);
+}
+
+.emptyTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.emptyText {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+

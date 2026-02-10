@@ -8,9 +8,13 @@ export type Level = 'Fácil' | 'Médio' | 'Difícil' | 'Mistas';
 interface HomeScreenProps {
   onStartQuiz: (category: Category, level: Level) => void;
   onBackToWelcome: () => void;
+  onOpenChallengeSelection: () => void;
 }
 
-const HomeScreen: React.FC<HomeScreenProps> = ({ onStartQuiz, onBackToWelcome }) => {
+const HomeScreen: React.FC<HomeScreenProps> = ({
+  onStartQuiz,
+  onBackToWelcome,
+}) => {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [selectedLevel, setSelectedLevel] = useState<Level | null>(null);
 
@@ -84,8 +88,8 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onStartQuiz, onBackToWelcome })
             animated={true}
           />
         </div>
-        <h1 className={styles.title}>2º Encontro Musical e Bíblico</h1>
-        <p className={styles.subtitle}>Organização Centro Novo e Santa Luzia do Paruá</p>
+        <h1 className={styles.title}>2º Encontro Musical e Bíblico CCB</h1>
+        <p className={styles.subtitle}>Organização: Centro Novo e Santa Luzia do Paruá</p>
       </div>
 
       <div className={styles.selectionSection}>
@@ -148,6 +152,8 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onStartQuiz, onBackToWelcome })
           Iniciar Quiz
         </button>
       </div>
+
+      
     </div>
   );
 };
