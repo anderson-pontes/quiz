@@ -13,7 +13,7 @@ function App() {
   >('welcome');
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [selectedLevel, setSelectedLevel] = useState<Level | null>(null);
-  const [challengeType, setChallengeType] = useState<'emoji' | 'hino' | null>(null);
+  const [challengeType, setChallengeType] = useState<'emoji' | 'hino' | 'mimica' | null>(null);
 
   const handleStartSelection = () => {
     setCurrentScreen('selection');
@@ -25,7 +25,7 @@ function App() {
     setCurrentScreen('quiz');
   };
 
-  const handleStartChallenge = (type: 'emoji' | 'hino') => {
+  const handleStartChallenge = (type: 'emoji' | 'hino' | 'mimica') => {
     setChallengeType(type);
     setCurrentScreen('challenge');
   };

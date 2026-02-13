@@ -8,7 +8,7 @@ export interface Question {
   level: 'Fácil' | 'Médio' | 'Difícil';
 }
 
-export const questions: Question[] = [
+const rawQuestions: Question[] = [
   {
     id: 1,
     category: 'Bíblia',
@@ -281,7 +281,7 @@ export const questions: Question[] = [
     explanation: 'Elias enfrentou os 450 profetas de Baal no monte Carmelo em um desafio para provar qual deus era verdadeiro.',
     level: 'Médio'
   },
-  // Perguntas Bíblicas - Difícil (IDs 31-40)
+  // Perguntas Bíblicas - Difícil (IDs 31-35)
   {
     id: 31,
     category: 'Bíblia',
@@ -330,9 +330,9 @@ export const questions: Question[] = [
   
   
  
-  // Perguntas de Teoria Musical - Fácil (IDs 41-50)
+  // Perguntas de Teoria Musical - Fácil (IDs 36-45)
   {
-    id: 41,
+    id: 36,
     category: 'Música',
     question: 'Quantas notas musicais existem na escala cromática ocidental?',
     options: ['7 notas', '12 notas', '15 notas', '24 notas'],
@@ -341,7 +341,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 42,
+    id: 37,
     category: 'Música',
     question: 'Qual é o nome da nota que vem depois de Sol na escala de Dó maior?',
     options: ['Fá', 'Lá', 'Si', 'Dó'],
@@ -350,7 +350,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 43,
+    id: 38,
     category: 'Música',
     question: 'Quantas linhas tem uma pauta musical padrão?',
     options: ['3 linhas', '4 linhas', '5 linhas', '6 linhas'],
@@ -359,7 +359,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 44,
+    id: 39,
     category: 'Música',
     question: 'Qual é o símbolo que indica que uma nota deve ser tocada mais forte?',
     options: ['Piano (p)', 'Forte (f)', 'Crescendo', 'Diminuendo'],
@@ -368,7 +368,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 45,
+    id: 40,
     category: 'Música',
     question: 'Qual instrumento de cordas é tocado com arco?',
     options: ['Violão', 'Violino', 'Harpa', 'Banjo'],
@@ -377,7 +377,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 46,
+    id: 41,
     category: 'Música',
     question: 'Quantos tempos tem uma semínima em um compasso 4/4?',
     options: ['1 tempo', '2 tempos', '3 tempos', '4 tempos'],
@@ -386,7 +386,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 47,
+    id: 42,
     category: 'Música',
     question: 'Qual é o nome da clave mais usada para instrumentos agudos?',
     options: ['Clave de Fá', 'Clave de Dó', 'Clave de Sol', 'Clave de Ré'],
@@ -395,7 +395,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 48,
+    id: 43,
     category: 'Música',
     question: 'O que significa "piano" (p) em uma partitura?',
     options: ['Tocar forte', 'Tocar suave', 'Tocar rápido', 'Tocar lento'],
@@ -404,7 +404,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 49,
+    id: 44,
     category: 'Música',
     question: 'Quantas oitavas completas existem em um piano padrão de 88 teclas?',
     options: ['5 oitavas', '6 oitavas', '7 oitavas', '8 oitavas'],
@@ -413,7 +413,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 50,
+    id: 45,
     category: 'Música',
     question: 'Qual é o nome do símbolo que aumenta a altura de uma nota em meio tom?',
     options: ['Bemol (♭)', 'Sustenido (♯)', 'Bequadro (♮)', 'Fermata'],
@@ -421,9 +421,9 @@ export const questions: Question[] = [
     explanation: 'O sustenido (♯) aumenta a altura de uma nota em meio tom. O bemol (♭) diminui em meio tom.',
     level: 'Fácil'
   },
-  // Perguntas de Teoria Musical - Médio (IDs 51-60)
+  // Perguntas de Teoria Musical - Médio (IDs 46-55)
   {
-    id: 51,
+    id: 46,
     category: 'Música',
     question: 'Quantos semitons existem em uma quinta justa?',
     options: ['5 semitons', '6 semitons', '7 semitons', '8 semitons'],
@@ -432,7 +432,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 52,
+    id: 47,
     category: 'Música',
     question: 'Qual é a fórmula de intervalos da escala maior?',
     options: ['T-T-ST-T-T-T-ST', 'T-ST-T-T-ST-T-T', 'T-T-ST-T-T-ST-T', 'ST-T-T-T-ST-T-T'],
@@ -441,7 +441,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 53,
+    id: 48,
     category: 'Música',
     question: 'Quantas notas tem um acorde de sétima dominante?',
     options: ['3 notas', '4 notas', '5 notas', '6 notas'],
@@ -450,7 +450,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 54,
+    id: 49,
     category: 'Música',
     question: 'Qual é o relativo menor de Dó maior?',
     options: ['Lá menor', 'Si menor', 'Ré menor', 'Mi menor'],
@@ -459,7 +459,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 55,
+    id: 50,
     category: 'Música',
     question: 'O que é um trítono?',
     options: ['Intervalo de 3 tons', 'Intervalo de 4 tons', 'Intervalo de 6 semitons', 'Intervalo de 8 semitons'],
@@ -468,7 +468,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 56,
+    id: 51,
     category: 'Música',
     question: 'Qual é a função do acorde de dominante em uma progressão harmônica?',
     options: ['Estabilidade', 'Tensão que resolve na tônica', 'Modulação', 'Repouso'],
@@ -477,7 +477,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 57,
+    id: 52,
     category: 'Música',
     question: 'Quantos acidentes (sustenidos) tem a escala de Sol maior?',
     options: ['0 sustenidos', '1 sustenido', '2 sustenidos', '3 sustenidos'],
@@ -486,7 +486,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 58,
+    id: 53,
     category: 'Música',
     question: 'O que significa "legato" em uma partitura?',
     options: ['Tocar separado', 'Tocar ligado', 'Tocar rápido', 'Tocar forte'],
@@ -495,7 +495,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 59,
+    id: 54,
     category: 'Música',
     question: 'Qual é a diferença entre um acorde maior e um acorde menor?',
     options: ['Apenas a tônica', 'Apenas a terça', 'Apenas a quinta', 'Apenas a sétima'],
@@ -504,7 +504,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 60,
+    id: 55,
     category: 'Música',
     question: 'O que é uma cadência perfeita?',
     options: ['V-I', 'IV-I', 'I-V', 'V-IV'],
@@ -512,9 +512,9 @@ export const questions: Question[] = [
     explanation: 'Uma cadência perfeita é a progressão V-I (dominante para tônica), que proporciona a sensação mais forte de conclusão e repouso.',
     level: 'Médio'
   },
-  // Perguntas de Teoria Musical - Difícil (IDs 61-70)
+  // Perguntas de Teoria Musical - Difícil (IDs 56-65)
   {
-    id: 61,
+    id: 56,
     category: 'Música',
     question: 'Qual é o modo grego que corresponde à escala maior natural?',
     options: ['Dórico', 'Frígio', 'Lídio', 'Jônio'],
@@ -523,7 +523,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 62,
+    id: 57,
     category: 'Música',
     question: 'O que é contraponto na música?',
     options: ['Técnica de harmonização', 'Técnica de composição com linhas melódicas independentes', 'Técnica de ritmo', 'Técnica de dinâmica'],
@@ -532,7 +532,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 63,
+    id: 58,
     category: 'Música',
     question: 'Quantos semitons existem em uma nona maior?',
     options: ['12 semitons', '13 semitons', '14 semitons', '15 semitons'],
@@ -541,7 +541,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 64,
+    id: 59,
     category: 'Música',
     question: 'O que é uma modulação enarmônica?',
     options: ['Modulação usando acordes com mesmo som mas nomes diferentes', 'Modulação cromática', 'Modulação por dominante secundária', 'Modulação diatônica'],
@@ -550,7 +550,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 65,
+    id: 60,
     category: 'Música',
     question: 'Qual é a função do acorde de sétima diminuta?',
     options: ['Tônica', 'Subdominante', 'Dominante secundária ou cromática', 'Relativo'],
@@ -559,7 +559,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 66,
+    id: 61,
     category: 'Música',
     question: 'O que é uma progressão de quintas no círculo de quintas?',
     options: ['Movimento por intervalos de quinta ascendente', 'Movimento por intervalos de quinta descendente', 'Movimento cromático', 'Movimento por segundas'],
@@ -568,7 +568,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 67,
+    id: 62,
     category: 'Música',
     question: 'O que é harmonia funcional?',
     options: ['Sistema que classifica acordes por sua função tonal', 'Sistema de escalas', 'Sistema de ritmo', 'Sistema de dinâmica'],
@@ -577,7 +577,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 68,
+    id: 63,
     category: 'Música',
     question: 'Qual é a diferença entre modo e escala?',
     options: ['Não há diferença', 'Modo é uma escala com padrão específico de intervalos começando em diferentes graus', 'Escala é um modo específico', 'Modo é apenas para música antiga'],
@@ -586,7 +586,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 69,
+    id: 64,
     category: 'Música',
     question: 'O que é uma cadência deceptiva?',
     options: ['V-VI em vez de V-I', 'I-V', 'IV-I', 'V-IV'],
@@ -595,7 +595,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 70,
+    id: 65,
     category: 'Música',
     question: 'O que é análise harmônica?',
     options: ['Análise de ritmo', 'Análise de melodia', 'Identificação e classificação de acordes e suas relações em uma peça musical', 'Análise de timbre'],
@@ -603,9 +603,9 @@ export const questions: Question[] = [
     explanation: 'Análise harmônica é o processo de identificar acordes, suas funções tonais, progressões e relações estruturais em uma composição musical.',
     level: 'Difícil'
   },
-  // Perguntas Bíblicas - Fácil (IDs 71-107)
+  // Perguntas Bíblicas - Fácil (IDs 66-102)
   {
-    id: 71,
+    id: 66,
     category: 'Bíblia',
     question: 'Quem construiu a arca?',
     options: ['Moisés', 'Noé', 'Jacó', 'Abraão'],
@@ -614,7 +614,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 72,
+    id: 67,
     category: 'Bíblia',
     question: 'Qual sinal Deus colocou no céu após o dilúvio?',
     options: ['Uma estrela', 'O arco-íris', 'Uma nuvem especial', 'Um relâmpago'],
@@ -623,7 +623,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 73,
+    id: 68,
     category: 'Bíblia',
     question: 'O que o povo quis construir em Babel?',
     options: ['Um castelo', 'Uma cidade e uma torre', 'Um templo', 'Um grande palácio'],
@@ -632,7 +632,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 74,
+    id: 69,
     category: 'Bíblia',
     question: 'O que Deus fez para parar a construção da torre de Babel?',
     options: ['Mandou um terremoto', 'Confundiu a língua do povo', 'Quebrou a torre', 'Mandou fogo do céu'],
@@ -641,7 +641,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 75,
+    id: 70,
     category: 'Bíblia',
     question: 'Como Esaú nasceu?',
     options: ['Careca', 'Cheio de pelos', 'De chapéu', 'Com asas'],
@@ -650,7 +650,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 76,
+    id: 71,
     category: 'Bíblia',
     question: 'O que Jacó segurava quando nasceu?',
     options: ['Um brinquedo', 'O pé do irmão', 'Um copo', 'Uma corda'],
@@ -659,7 +659,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 77,
+    id: 72,
     category: 'Bíblia',
     question: 'Qual era o nome do jardim onde Adão e Eva viviam?',
     options: ['Jardim Feliz', 'Jardim do Éden', 'Jardim Azul', 'Jardim da Promessa'],
@@ -668,7 +668,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 78,
+    id: 73,
     category: 'Bíblia',
     question: 'Qual animal falou com Eva?',
     options: ['Cachorro', 'Serpente', 'Cavalo', 'Leão'],
@@ -677,7 +677,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 79,
+    id: 74,
     category: 'Bíblia',
     question: 'Quem eram os gêmeos filhos de Isaque?',
     options: ['José e Benjamim', 'Esaú e Jacó', 'Caim e Abel', 'Davi e Jônatas'],
@@ -686,7 +686,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 80,
+    id: 75,
     category: 'Bíblia',
     question: 'O que Deus criou no primeiro dia?',
     options: ['As plantas', 'A luz', 'Os animais', 'Os astros'],
@@ -695,7 +695,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 81,
+    id: 76,
     category: 'Bíblia',
     question: 'O que Deus fez no sétimo dia da criação?',
     options: ['Trabalhou mais', 'Dormiu', 'Descansou', 'Começou tudo de novo'],
@@ -704,7 +704,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 82,
+    id: 77,
     category: 'Bíblia',
     question: 'Que tipo de luz Deus colocou no céu para governar o dia?',
     options: ['A lua', 'O sol', 'As estrelas', 'O arco-íris'],
@@ -713,7 +713,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 83,
+    id: 78,
     category: 'Bíblia',
     question: 'Que material Deus mandou usar na construção da arca de Noé?',
     options: ['Madeira', 'Pedra', 'Ferro', 'Bronze'],
@@ -722,7 +722,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 84,
+    id: 79,
     category: 'Bíblia',
     question: 'Quanto tempo choveu sem parar durante o dilúvio?',
     options: ['7 dias', '20 dias', '40 dias', '100 dias'],
@@ -731,7 +731,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 85,
+    id: 80,
     category: 'Bíblia',
     question: 'Que ave Noé soltou primeiro depois do dilúvio?',
     options: ['Um corvo', 'Uma pomba', 'Um pardal', 'Uma águia'],
@@ -740,7 +740,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 86,
+    id: 81,
     category: 'Bíblia',
     question: 'O que aconteceu com a esposa de Ló quando olhou para trás?',
     options: ['Caiu e dormiu', 'Virou uma estátua de sal', 'Fugiu para outra cidade', 'Virou pedra'],
@@ -749,7 +749,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 87,
+    id: 82,
     category: 'Bíblia',
     question: 'Quem lutou com um anjo até ser abençoado?',
     options: ['Jacó', 'Adão', 'Noé', 'Abraão'],
@@ -758,7 +758,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 88,
+    id: 83,
     category: 'Bíblia',
     question: 'Quem ofereceu o fruto proibido a Eva?',
     options: ['Seu esposo', 'Uma serpente', 'Um papagaio', 'Um anjo'],
@@ -767,7 +767,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 89,
+    id: 84,
     category: 'Bíblia',
     question: 'Quem interpretou os sonhos do faraó no Egito?',
     options: ['Daniel', 'José', 'Arão', 'Moisés'],
@@ -776,7 +776,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 90,
+    id: 85,
     category: 'Bíblia',
     question: 'Quem vendeu o direito de primogenitura por um prato de comida?',
     options: ['Jacó', 'Esaú', 'Ismael', 'Benjamim'],
@@ -785,7 +785,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 91,
+    id: 86,
     category: 'Bíblia',
     question: 'Para qual terra Deus prometeu levar Abraão?',
     options: ['Canaã', 'Egito', 'Síria', 'Babilônia'],
@@ -794,7 +794,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 92,
+    id: 87,
     category: 'Bíblia',
     question: 'Quem era o rei de Sodoma quando Ló foi capturado?',
     options: ['Quedorlaomer', 'Bera', 'Abimeleque', 'Faraó'],
@@ -803,7 +803,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 93,
+    id: 88,
     category: 'Bíblia',
     question: 'Qual foi o nome do filho de Abraão com Agar?',
     options: ['Isaque', 'Ismael', 'Esaú', 'Ló'],
@@ -812,7 +812,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 94,
+    id: 89,
     category: 'Bíblia',
     question: 'Quem foi levado para o céu sem ver a morte?',
     options: ['Noé', 'Enoque', 'Abraão', 'Elias'],
@@ -821,7 +821,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 95,
+    id: 90,
     category: 'Bíblia',
     question: 'Qual filho de Jacó recebeu uma túnica de várias cores?',
     options: ['Judá', 'José', 'Benjamim', 'Rúben'],
@@ -830,7 +830,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 96,
+    id: 91,
     category: 'Bíblia',
     question: 'Quem foi levada para o Egito e ficou na casa de Faraó?',
     options: ['Rebeca', 'Sara', 'Raquel', 'Miriã'],
@@ -839,7 +839,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 97,
+    id: 92,
     category: 'Bíblia',
     question: 'Onde Jacó lutou com o anjo de Deus?',
     options: ['Betel', 'Peniel', 'Siquém', 'Hebrom'],
@@ -848,7 +848,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 98,
+    id: 93,
     category: 'Bíblia',
     question: 'Quem teve muitos filhos que se tornaram as 12 tribos de Israel?',
     options: ['Abraão', 'Isaque', 'Jacó', 'José'],
@@ -857,7 +857,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 99,
+    id: 94,
     category: 'Bíblia',
     question: 'Quem mentiu dizendo que a esposa era sua irmã?',
     options: ['Abraão', 'Noé', 'José', 'Isaque'],
@@ -866,7 +866,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 100,
+    id: 95,
     category: 'Bíblia',
     question: 'Quem foi jogado numa cisterna por seus irmãos?',
     options: ['Judá', 'José', 'Benjamim', 'Esaú'],
@@ -875,7 +875,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 101,
+    id: 96,
     category: 'Bíblia',
     question: 'Quem nasceu primeiro: Esaú ou Jacó?',
     options: ['Jacó', 'Esaú', 'Isaque', 'Abraão'],
@@ -884,7 +884,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 102,
+    id: 97,
     category: 'Bíblia',
     question: 'Quem foi o primeiro filho de Abraão?',
     options: ['Isaque', 'Ismael', 'Esaú', 'José'],
@@ -893,7 +893,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 103,
+    id: 98,
     category: 'Bíblia',
     question: 'Quem foi buscar uma esposa para Isaque?',
     options: ['O próprio Isaque', 'O servo de Abraão', 'Jacó', 'Ló'],
@@ -902,7 +902,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 104,
+    id: 99,
     category: 'Bíblia',
     question: 'Quem foi vendido pelos irmãos por vinte moedas de prata?',
     options: ['José', 'Benjamim', 'Judá', 'Simeão'],
@@ -911,7 +911,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 105,
+    id: 100,
     category: 'Bíblia',
     question: 'No relato da criação, o que Deus criou no quarto dia?',
     options: ['As aves do céu e os peixes do mar', 'O homem e a mulher', 'A vegetação e as árvores frutíferas', 'O sol, a lua e as estrelas'],
@@ -920,7 +920,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 106,
+    id: 101,
     category: 'Bíblia',
     question: 'Qual material foi usado para calafetar a arca de Noé por dentro e por fora?',
     options: ['Cimento', 'Barro', 'Betume (piche)', 'Resina de pinheiro'],
@@ -929,7 +929,7 @@ export const questions: Question[] = [
     level: 'Fácil'
   },
   {
-    id: 107,
+    id: 102,
     category: 'Bíblia',
     question: 'Por que preço Esaú vendeu o seu direito de primogenitura a Jacó?',
     options: ['Um rebanho de ovelhas', 'Um prato de lentilhas e pão', 'Trinta moedas de prata', 'A túnica colorida de Jacó'],
@@ -937,9 +937,9 @@ export const questions: Question[] = [
     explanation: 'Esaú vendeu o seu direito de primogenitura a Jacó por um prato de comida (Gênesis 25:34).',
     level: 'Fácil'
   },
-  // Perguntas Bíblicas - Médio (IDs 108-120)
+  // Perguntas Bíblicas - Médio (IDs 103-115)
   {
-    id: 108,
+    id: 103,
     category: 'Bíblia',
     question: 'Por que Sara expulsou Agar e Ismael de sua casa?',
     options: ['Porque viu Ismael zombando de Isaque', 'Porque Ismael roubou a comida de Isaque', 'Por ordem direta de um anjo a Sara', 'Porque Abraão pediu isso a ela'],
@@ -948,7 +948,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 109,
+    id: 104,
     category: 'Bíblia',
     question: 'O que Deus proveu para ser sacrificado no lugar de Isaque no monte Moriá?',
     options: ['Uma pomba', 'Um carneiro preso num matagal', 'Um novilho', 'Um cordeiro branco'],
@@ -957,7 +957,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 110,
+    id: 105,
     category: 'Bíblia',
     question: 'Quando Abraão e Ló se separaram, para onde Ló escolheu ir?',
     options: ['De volta para a Caldeia', 'Para as montanhas de Hebrom', 'Para a planície do Jordão, perto de Sodoma', 'Para o deserto do Neguebe'],
@@ -966,7 +966,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 111,
+    id: 106,
     category: 'Bíblia',
     question: 'Quem era a mãe de José e Benjamim, os filhos preferidos de Jacó?',
     options: ['Raquel', 'Lia', 'Bila', 'Zilpa'],
@@ -975,7 +975,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 112,
+    id: 107,
     category: 'Bíblia',
     question: 'O que José fez quando seus irmãos foram ao Egito comprar trigo?',
     options: ['Revelou-se logo no primeiro encontro', 'Testou-os, tratando-os como espiões antes de se revelar', 'Fingiu que não os conhecia e mandou-os embora sem nada', 'Mandou-os prender e executar imediatamente'],
@@ -984,7 +984,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 113,
+    id: 108,
     category: 'Bíblia',
     question: 'Quais são os quatro rios que se ramificavam do rio que saía do Éden?',
     options: ['Pison, Giom, Nilo e Sena', 'Jaboque, Arnom, Querite e Eufrates', 'Nilo, Jordão, Tigre e Eufrates', 'Pison, Giom, Tigre (Hidéquel) e Eufrates'],
@@ -993,7 +993,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 114,
+    id: 109,
     category: 'Bíblia',
     question: 'Quais eram as dimensões da arca de Noé em côvados?',
     options: ['500 de comprimento, 100 de largura e 50 de altura', '300 de comprimento, 50 de largura e 30 de altura', '100 de comprimento, 50 de largura e 30 de altura', '400 de comprimento, 75 de largura e 45 de altura'],
@@ -1002,7 +1002,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 115,
+    id: 110,
     category: 'Bíblia',
     question: 'Após a morte de Sara, com quem Abraão se casou novamente?',
     options: ['Milca', 'Ada', 'Quetura', 'Basemate'],
@@ -1011,7 +1011,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 116,
+    id: 111,
     category: 'Bíblia',
     question: 'Qual dos filhos de Jacó não deu nome a uma das 12 tribos originais de Israel, sendo substituído por seus dois filhos?',
     options: ['Judá', 'Levi', 'José', 'Benjamim'],
@@ -1020,7 +1020,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 117,
+    id: 112,
     category: 'Bíblia',
     question: 'Na visão da escada de Jacó, o que os anjos de Deus faziam?',
     options: ['Estavam parados vigiando Jacó', 'Subiam e desciam pela escada', 'Desciam apenas para falar com ele', 'Lutavam contra as trevas'],
@@ -1029,7 +1029,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 118,
+    id: 113,
     category: 'Bíblia',
     question: 'Qual era a característica física mencionada sobre Lia, a primeira esposa de Jacó?',
     options: ['Ela era muda', 'Ela foi estéril por toda a vida', 'Ela era coxa de uma perna', 'Ela tinha olhos baços (fracos)'],
@@ -1038,7 +1038,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 119,
+    id: 114,
     category: 'Bíblia',
     question: 'Qual foi a reação de Sara ao ouvir que teria um filho na velhice?',
     options: ['Ela riu consigo mesma', 'Ela expulsou o mensageiro', 'Ela caiu por terra em adoração', 'Ela chorou de emoção'],
@@ -1047,7 +1047,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 120,
+    id: 115,
     category: 'Bíblia',
     question: 'Qual irmão sugeriu jogar José numa cisterna para livrá-lo da morte?',
     options: ['Rúben', 'Benjamim', 'Levi', 'Judá'],
@@ -1056,7 +1056,7 @@ export const questions: Question[] = [
     level: 'Médio'
   },
   {
-    id: 121,
+    id: 116,
     category: 'Bíblia',
     question: 'Qual rei teve lepra até a morte por não buscar ao Senhor?',
     options: ['Uzias', 'Asa', 'Jorão', 'Jeú'],
@@ -1065,7 +1065,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 122,
+    id: 117,
     category: 'Bíblia',
     question: 'Qual rei viu o sol retroceder como sinal de Deus?',
     options: ['Josias', 'Ezequias', 'Acabe', 'Manassés'],
@@ -1074,7 +1074,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 123,
+    id: 118,
     category: 'Bíblia',
     question: 'Qual rei foi humilhado e passou a viver como animal por um tempo?',
     options: ['Dario', 'Belsazar', 'Nabucodonosor', 'Ciro'],
@@ -1083,7 +1083,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 124,
+    id: 119,
     category: 'Bíblia',
     question: 'Qual profeta chorou tanto por Jerusalém que ficou conhecido como "o profeta chorão"?',
     options: ['Isaías', 'Jeremias', 'Ezequiel', 'Oséias'],
@@ -1092,7 +1092,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 125,
+    id: 120,
     category: 'Bíblia',
     question: 'Qual profeta viu um vale cheio de ossos secos que ganharam vida?',
     options: ['Isaías', 'Jeremias', 'Daniel', 'Ezequiel'],
@@ -1101,7 +1101,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 126,
+    id: 121,
     category: 'Bíblia',
     question: 'Qual profeta casou com uma mulher infiel por ordem de Deus?',
     options: ['Amós', 'Oséias', 'Jonas', 'Miqueias'],
@@ -1110,7 +1110,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 127,
+    id: 122,
     category: 'Bíblia',
     question: 'Qual rei morreu comendo grama como boi por causa do orgulho?',
     options: ['Ciro', 'Dario', 'Nabucodonosor', 'Belsazar'],
@@ -1119,7 +1119,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 128,
+    id: 123,
     category: 'Bíblia',
     question: 'Quem escreveu o livro de Atos dos Apóstolos?',
     options: ['Pedro', 'Paulo', 'João', 'Lucas'],
@@ -1128,7 +1128,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 129,
+    id: 124,
     category: 'Bíblia',
     question: 'Quem foi mordido por uma serpente e curado ao olhar para a serpente de bronze?',
     options: ['Moisés', 'Arão', 'O povo de Israel', 'Josué'],
@@ -1137,7 +1137,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 130,
+    id: 125,
     category: 'Bíblia',
     question: 'Quem foi alimentado por corvos no deserto?',
     options: ['Eliseu', 'Elias', 'Jeremias', 'João Batista'],
@@ -1146,7 +1146,7 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 131,
+    id: 126,
     category: 'Bíblia',
     question: 'O que aconteceu com os rapazes que zombaram da calvície do profeta Eliseu?',
     options: ['Ficaram todos calvos instantaneamente', 'Ficaram mudos para sempre', 'Foram atacados por duas ursas', 'Foram engolidos pela terra'],
@@ -1155,12 +1155,446 @@ export const questions: Question[] = [
     level: 'Difícil'
   },
   {
-    id: 132,
+    id: 127,
     category: 'Bíblia',
     question: 'Qual era a profissão de Lucas, o autor de um dos Evangelhos e do livro de Atos dos Apóstolos?',
     options: ['Pescador', 'Médico', 'Fabricante de tendas', 'Cobrador de impostos'],
     correctAnswer: 1,
     explanation: 'Saúda-vos Lucas, o médico amado, e Demas.',
     level: 'Difícil'
+  },
+  {
+    id: 128,
+    category: 'Música',
+    question: 'Qual desses é um instrumento de sopro?',
+    options: ['Violino', 'Clarinete', 'Órgão'],
+    correctAnswer: 1,
+    explanation: 'O clarinete é um instrumento de sopro da família das madeiras — o som é produzido pelo ar que passa pela palheta. O violino é de cordas e o órgão é considerado de teclado (com tubos ou circuito).',
+    level: 'Fácil'
+  },
+  {
+    id: 129,
+    category: 'Música',
+    question: 'Por que a orquestra precisa estudar música?',
+    options: ['Para tocar mais bonito para Deus', 'Para ser famosa', 'Para competir'],
+    correctAnswer: 0,
+    explanation: 'Estudar música ajuda a orquestra a tocar com excelência, harmonia e respeito, oferecendo o melhor a Deus e às pessoas que ouvem.',
+    level: 'Fácil'
+  },
+  {
+    id: 130,
+    category: 'Música',
+    question: 'O que é uma partitura?',
+    options: ['Um desenho qualquer', 'O papel onde está escrita a música', 'Um livro de histórias'],
+    correctAnswer: 1,
+    explanation: 'A partitura é onde a música é escrita com notas, pausas e símbolos, para que o músico saiba o que tocar ou cantar.',
+    level: 'Fácil'
+  },
+  {
+    id: 131,
+    category: 'Música',
+    question: 'Qual nota vem depois do Sol?',
+    options: ['Lá', 'Fá', 'Mi'],
+    correctAnswer: 0,
+    explanation: 'A sequência das notas é: Dó – Ré – Mi – Fá – Sol – Lá – Si.',
+    level: 'Fácil'
+  },
+  {
+    id: 132,
+    category: 'Música',
+    question: 'Quantas notas musicais existem?',
+    options: ['5', '7', '12'],
+    correctAnswer: 1,
+    explanation: 'As 7 notas musicais são: Dó – Ré – Mi – Fá – Sol – Lá – Si.',
+    level: 'Fácil'
+  },
+  {
+    id: 133,
+    category: 'Música',
+    question: 'Um som longo é aquele que:',
+    options: ['Dura bastante', 'É muito forte', 'É muito fino'],
+    correctAnswer: 0,
+    explanation: 'Som longo se refere à duração — ou seja, ele permanece por mais tempo. "Forte" fala de intensidade e "fino" fala de altura (grave/agudo).',
+    level: 'Fácil'
+  },
+  {
+    id: 134,
+    category: 'Música',
+    question: 'Qual é a principal função da orquestra na CCB?',
+    options: ['Fazer show', 'Ajudar a irmandade nos cânticos dos hinos', 'Ensaiar só para músicos'],
+    correctAnswer: 1,
+    explanation: 'A orquestra existe para servir à congregação, ajudando a irmandade a cantar os hinos com mais firmeza, harmonia e reverência.',
+    level: 'Fácil'
+  },
+  {
+    id: 135,
+    category: 'Música',
+    question: 'A orquestra da CCB existe para…',
+    options: ['Aparecer', 'Louvar a Deus', 'Ganhar'],
+    correctAnswer: 1,
+    explanation: 'A orquestra existe para servir ao culto e louvar a Deus com humildade e dedicação, usando a música como instrumento de adoração.',
+    level: 'Fácil'
+  },
+  {
+    id: 136,
+    category: 'Música',
+    question: 'Qual desses instrumentos faz parte da orquestra da CCB?',
+    options: ['Guitarra elétrica', 'Violino', 'Bateria'],
+    correctAnswer: 1,
+    explanation: 'Na orquestra da CCB, os instrumentos são tradicionais e acústicos, como violino, viola, violoncelo, flauta, clarinete, trompete, etc. A guitarra elétrica e a bateria não fazem parte da formação da orquestra.',
+    level: 'Fácil'
+  },
+  {
+    id: 137,
+    category: 'Música',
+    question: 'Quem orienta os músicos durante o ensaio?',
+    options: ['O encarregado', 'O ancião', 'O porteiro'],
+    correctAnswer: 0,
+    explanation: 'O encarregado da orquestra é quem orienta os músicos nos ensaios: marca entradas, corrige ritmo, afinação e ajuda todos a tocarem juntos em harmonia.',
+    level: 'Fácil'
+  },
+  {
+    id: 138,
+    category: 'Música',
+    question: 'Um som muito alto é chamado de…',
+    options: ['Fraco', 'Forte', 'Longo'],
+    correctAnswer: 1,
+    explanation: 'Um som forte tem alta intensidade, ou seja, é alto. Fraco → baixo. Longo → duração, não intensidade.',
+    level: 'Fácil'
+  },
+  {
+    id: 139,
+    category: 'Música',
+    question: 'Um som que dura pouco tempo é…',
+    options: ['Longo', 'Curto', 'Alto'],
+    correctAnswer: 1,
+    explanation: 'Quando o som dura pouco, dizemos que ele é curto. "Longo" é o oposto, e "alto" se refere à intensidade, não à duração.',
+    level: 'Fácil'
+  },
+  {
+    id: 140,
+    category: 'Música',
+    question: 'Qual propriedade mostra se o som é forte ou fraco?',
+    options: ['Intensidade', 'Altura', 'Timbre'],
+    correctAnswer: 0,
+    explanation: 'A intensidade indica se o som é forte (alto) ou fraco (baixo). Altura → grave ou agudo. Timbre → "cor" do som (o que diferencia um violino de um piano, por exemplo).',
+    level: 'Fácil'
+  },
+  {
+    id: 141,
+    category: 'Música',
+    question: 'Um som fraco é:',
+    options: ['Alto', 'Baixinho', 'Longo'],
+    correctAnswer: 1,
+    explanation: 'Som fraco se refere à intensidade baixa — é um som suave, baixinho. "Alto" é forte, e "longo" é duração.',
+    level: 'Fácil'
+  },
+  {
+    id: 142,
+    category: 'Música',
+    question: 'O que é uma pausa na música?',
+    options: ['Um grito', 'Um silêncio', 'Uma corrida'],
+    correctAnswer: 1,
+    explanation: 'A pausa indica que não se deve emitir som durante certo período de tempo. Ela marca silêncio na música, mantendo a duração da nota correspondente.',
+    level: 'Fácil'
+  },
+  {
+    id: 143,
+    category: 'Música',
+    question: 'Quantas linhas tem a pauta musical?',
+    options: ['3', '5', '7'],
+    correctAnswer: 1,
+    explanation: 'A pauta musical tem 5 linhas horizontais, onde são colocadas as notas musicais e símbolos para indicar a altura e a duração do som. As linhas e os espaços representam diferentes notas.',
+    level: 'Fácil'
+  },
+  {
+    id: 144,
+    category: 'Música',
+    question: 'Qual desses é um instrumento de cordas?',
+    options: ['Trompete', 'Violão', 'Tambor'],
+    correctAnswer: 1,
+    explanation: 'O violão produz som por meio de cordas vibrantes. Trompete → é de sopro. Tambor → é de percussão.',
+    level: 'Fácil'
+  },
+  {
+    id: 145,
+    category: 'Música',
+    question: 'O que é timbre?',
+    options: ['A força do som', 'A origem do som', 'A velocidade da música'],
+    correctAnswer: 1,
+    explanation: 'O timbre é a característica que diferencia os sons, permitindo identificar qual instrumento ou voz está produzindo o som, mesmo que toquem a mesma nota. Força do som → intensidade. Velocidade da música → andamento.',
+    level: 'Fácil'
+  },
+  {
+    id: 146,
+    category: 'Música',
+    question: 'Qual é a unidade de tempo em 6/8?',
+    options: ['Colcheia', 'Semínima pontuada', 'Mínima'],
+    correctAnswer: 1,
+    explanation: 'No compasso 6/8, há 6 colcheias por compasso, mas a unidade de tempo principal é a semínima pontuada, que agrupa 3 colcheias cada. Isso dá o ritmo composto típico do 6/8.',
+    level: 'Médio'
+  },
+  {
+    id: 147,
+    category: 'Música',
+    question: 'O que é a barra de compasso?',
+    options: ['Um traço que separa os compassos', 'Um enfeite musical', 'Um silêncio'],
+    correctAnswer: 0,
+    explanation: 'A barra de compasso divide a música em medidas iguais, facilitando a leitura e ajudando os músicos a manter o ritmo correto.',
+    level: 'Médio'
+  },
+  {
+    id: 148,
+    category: 'Música',
+    question: 'Onde fica a clave?',
+    options: ['No meio do pentagrama', 'No começo do pentagrama', 'No final do pentagrama'],
+    correctAnswer: 1,
+    explanation: 'A clave indica a altura das notas no pentagrama e sempre fica no início, ajudando o músico a saber quais linhas e espaços representam quais notas.',
+    level: 'Fácil'
+  },
+  {
+    id: 149,
+    category: 'Música',
+    question: 'Qual símbolo indica que a música acabou?',
+    options: ['Ponto final', 'Barra dupla (uma fina e outra grossa)', 'Vírgula'],
+    correctAnswer: 1,
+    explanation: 'A barra dupla, sendo uma linha fina e outra grossa, indica o fim da peça musical.',
+    level: 'Fácil'
+  },
+  {
+    id: 150,
+    category: 'Música',
+    question: 'O que usamos para marcar o tempo da música?',
+    options: ['Relógio', 'Compasso', 'Lápis'],
+    correctAnswer: 1,
+    explanation: 'O compasso organiza a música em tempos iguais, ajudando músicos a tocar no ritmo certo.',
+    level: 'Médio'
+  },
+  {
+    id: 151,
+    category: 'Música',
+    question: 'Em 3/4, o compasso é:',
+    options: ['Binário', 'Ternário', 'Quaternário'],
+    correctAnswer: 1,
+    explanation: 'No compasso 3/4 existem 3 tempos por compasso; cada tempo corresponde a uma semínima. É chamado de compasso ternário simples, típico de valsas.',
+    level: 'Médio'
+  },
+  {
+    id: 152,
+    category: 'Música',
+    question: 'Em 2/4, o compasso tem:',
+    options: ['2 tempos e a semínima vale 1 tempo', '2 tempos e a mínima vale 1 tempo', '2 tempos e a colcheia vale 1 tempo'],
+    correctAnswer: 0,
+    explanation: 'No compasso 2/4 existem 2 tempos por compasso; cada tempo corresponde a uma semínima. É um exemplo clássico de compasso simples binário.',
+    level: 'Médio'
+  },
+  {
+    id: 153,
+    category: 'Música',
+    question: 'O compasso 6/8 é classificado como:',
+    options: ['Simples binário', 'Composto binário', 'Simples ternário'],
+    correctAnswer: 1,
+    explanation: 'O 6/8 é composto binário porque possui 2 tempos principais; cada tempo é dividido em 3 partes (ternário). Isso é típico de compassos compostos.',
+    level: 'Médio'
+  },
+  {
+    id: 154,
+    category: 'Música',
+    question: 'Em 9/8, cada compasso tem:',
+    options: ['9 tempos e a colcheia vale 1 tempo', '3 tempos com divisão ternária', '9 tempos e a semínima vale 1 tempo'],
+    correctAnswer: 1,
+    explanation: 'O compasso 9/8 é composto ternário: possui 3 tempos principais, cada um dividido em 3 colcheias. Isso dá 9 colcheias no total por compasso.',
+    level: 'Médio'
+  },
+  {
+    id: 155,
+    category: 'Música',
+    question: 'Em um compasso composto binário, temos:',
+    options: ['2 tempos divididos em 3 partes', '2 tempos divididos em 2 partes', '3 tempos divididos em 2 partes'],
+    correctAnswer: 0,
+    explanation: 'Um compasso composto binário tem 2 tempos principais, e cada tempo é dividido em 3 subtempos. Exemplo: 6/8 → 2 tempos (semínima pontuada) com 3 colcheias cada.',
+    level: 'Médio'
+  },
+  {
+    id: 156,
+    category: 'Música',
+    question: 'Qual é a armadura de clave de Ré maior?',
+    options: ['1 sustenido', '2 sustenidos', '2 bemóis'],
+    correctAnswer: 1,
+    explanation: 'A armadura de clave indica quais notas serão sempre sustenidas ou bemolizadas na música: Ré maior possui F# e C# → 2 sustenidos.',
+    level: 'Médio'
+  },
+  {
+    id: 157,
+    category: 'Música',
+    question: 'Qual é o intervalo entre Dó e Sol?',
+    options: ['Terça justa', 'Quinta justa', 'Sexta maior'],
+    correctAnswer: 1,
+    explanation: 'Contando Dó – Ré – Mi – Fá – Sol, temos 5 notas. Esse intervalo é chamado de quinta justa, muito usado em escalas e acordes.',
+    level: 'Difícil'
+  },
+  {
+    id: 158,
+    category: 'Música',
+    question: 'O que o número de cima da fórmula de compasso indica?',
+    options: ['O valor da nota', 'Quantos tempos tem o compasso', 'A velocidade da música'],
+    correctAnswer: 1,
+    explanation: 'Na fórmula de compasso, o número de cima mostra quantos tempos existem no compasso; o número de baixo indica qual figura vale 1 tempo.',
+    level: 'Médio'
+  },
+  {
+    id: 159,
+    category: 'Música',
+    question: 'O que o número de baixo da fórmula de compasso indica?',
+    options: ['Quantos compassos tem a música', 'Qual figura vale 1 tempo', 'O tom da música'],
+    correctAnswer: 1,
+    explanation: 'Na fórmula de compasso, o número de cima indica quantos tempos há em cada compasso; o número de baixo indica qual figura recebe 1 tempo (ex.: 4 = semínima, 8 = colcheia).',
+    level: 'Médio'
+  },
+  {
+    id: 160,
+    category: 'Música',
+    question: 'Em 4/4, cada compasso tem:',
+    options: ['4 tempos e a semínima vale 1 tempo', '4 compassos e a mínima vale 1 tempo', '4 tempos e a colcheia vale 1 tempo'],
+    correctAnswer: 0,
+    explanation: 'O compasso 4/4 é o mais comum na música ocidental: possui 4 tempos por compasso; cada tempo equivale a uma semínima. É chamado de compasso quaternário simples.',
+    level: 'Médio'
+  },
+  {
+    id: 161,
+    category: 'Música',
+    question: 'O que é um acorde?',
+    options: ['Uma nota sozinha', 'Duas ou mais notas juntas', 'Um silêncio'],
+    correctAnswer: 1,
+    explanation: 'Um acorde é a combinação de duas ou mais notas tocadas ao mesmo tempo, criando harmonia na música.',
+    level: 'Médio'
+  },
+  {
+    id: 162,
+    category: 'Música',
+    question: 'Quando duas notas têm o mesmo som, dizemos que são…',
+    options: ['Iguais', 'Enarmônicas', 'Diferentes'],
+    correctAnswer: 1,
+    explanation: 'Notas enarmônicas têm nomes diferentes, mas produzem o mesmo som. Ex.: Dó# e Ré♭ soam iguais, mas têm nomes diferentes.',
+    level: 'Médio'
+  },
+  {
+    id: 163,
+    category: 'Música',
+    question: 'O que é o compasso?',
+    options: ['A divisão do tempo da música', 'O nome da canção', 'O instrumento'],
+    correctAnswer: 0,
+    explanation: 'O compasso organiza a música em medidas iguais, facilitando a leitura e ajudando os músicos a manter o ritmo correto. Ex.: 4/4 → 4 tempos por compasso.',
+    level: 'Médio'
+  },
+  {
+    id: 164,
+    category: 'Música',
+    question: 'Qual é a fórmula de tons e semitons da escala maior?',
+    options: ['T – S – T – T – S – T – T', 'T – T – S – T – T – T – S', 'S – T – T – S – T – T – S'],
+    correctAnswer: 1,
+    explanation: 'A escala maior segue sempre o padrão: T = tom (2 semitons), S = semitom (1 semitom). Exemplo em Dó maior: Dó (T) Ré (T) Mi (S) Fá (T) Sol (T) Lá (T) Si (S) Dó.',
+    level: 'Difícil'
+  },
+  {
+    id: 165,
+    category: 'Música',
+    question: 'O que indica o andamento?',
+    options: ['A altura da nota', 'A velocidade da música', 'A letra'],
+    correctAnswer: 1,
+    explanation: 'O andamento define quão rápido ou devagar a música deve ser executada. Ex.: Lento, Moderato, Allegro.',
+    level: 'Médio'
+  },
+  {
+    id: 166,
+    category: 'Música',
+    question: 'O que é um semitom?',
+    options: ['Um tom inteiro', 'Meio tom', 'Dois tons'],
+    correctAnswer: 1,
+    explanation: 'O semitom é a menor distância entre duas notas consecutivas na música ocidental. Ex.: Dó → Dó# ou Mi → Fá. Um tom inteiro equivale a dois semitons.',
+    level: 'Médio'
+  },
+  {
+    id: 167,
+    category: 'Música',
+    question: 'O que o bemol (♭) faz com a nota?',
+    options: ['Sobe meio tom', 'Abaixa meio tom', 'Deixa mais forte'],
+    correctAnswer: 1,
+    explanation: 'O bemol (♭) abaixa a nota em meio tom, tornando-a mais grave.',
+    level: 'Fácil'
+  },
+  {
+    id: 168,
+    category: 'Música',
+    question: 'O que o sustenido (♯) faz com a nota?',
+    options: ['Abaixa o som', 'Sobe meio tom', 'Apaga a nota'],
+    correctAnswer: 1,
+    explanation: 'O sustenido (♯) eleva a nota em meio tom, tornando-a um pouco mais aguda. O bemol (♭) faz o contrário, abaixa meio tom.',
+    level: 'Fácil'
+  },
+  {
+    id: 169,
+    category: 'Música',
+    question: 'O que é a armadura de clave?',
+    options: ['Um enfeite da música', 'Os sustenidos ou bemóis no começo da pauta', 'O nome do hino'],
+    correctAnswer: 1,
+    explanation: 'A armadura de clave indica quais notas serão sempre sustenidas (#) ou bemolizadas (b) durante toda a música, facilitando a leitura e execução.',
+    level: 'Médio'
+  },
+  {
+    id: 170,
+    category: 'Música',
+    question: 'Qual é o acorde de Dó maior?',
+    options: ['Dó – Ré – Mi', 'Dó – Mi – Sol', 'Dó – Fá – Lá'],
+    correctAnswer: 1,
+    explanation: 'Um acorde maior é formado por: Tônica (nota principal, Dó), Terça maior (Mi), Quinta justa (Sol). Juntas, essas notas criam o acorde de Dó maior.',
+    level: 'Médio'
+  },
+  {
+    id: 171,
+    category: 'Música',
+    question: 'O que é um intervalo?',
+    options: ['A distância entre duas notas', 'Uma pausa longa', 'Um acorde'],
+    correctAnswer: 0,
+    explanation: 'O intervalo mede quantos tons ou semitons separam duas notas. Ex.: Dó → Mi = terça maior; Dó → Sol = quinta justa.',
+    level: 'Fácil'
+  },
+  {
+    id: 172,
+    category: 'Música',
+    question: 'Qual é a escala que começa no Dó e não tem sustenidos nem bemóis?',
+    options: ['Escala de Sol', 'Escala de Dó maior', 'Escala de Ré'],
+    correctAnswer: 1,
+    explanation: 'A escala de Dó maior é pura, sem sustenidos (#) nem bemóis (♭): Notas: Dó – Ré – Mi – Fá – Sol – Lá – Si – Dó.',
+    level: 'Fácil'
+  },
+  {
+    id: 173,
+    category: 'Música',
+    question: 'O que é uma escala?',
+    options: ['Um tipo de compasso', 'Uma sequência de notas', 'Um instrumento'],
+    correctAnswer: 1,
+    explanation: 'Uma escala é uma sequência ordenada de notas dentro de uma tonalidade, usada para criar melodias e harmonias. Ex.: Dó maior → Dó, Ré, Mi, Fá, Sol, Lá, Si, Dó.',
+    level: 'Fácil'
+  },
+  {
+    id: 174,
+    category: 'Música',
+    question: 'Quando o compasso é 4/4, isso quer dizer que:',
+    options: ['Cada compasso tem 4 tempos', 'Tem 4 notas diferentes', 'Tem 4 claves'],
+    correctAnswer: 0,
+    explanation: 'O 4/4 é um compasso quaternário simples: número de cima (4) → indica 4 tempos por compasso; número de baixo (4) → indica que cada tempo vale uma semínima.',
+    level: 'Fácil'
   }
 ];
+
+function sortByCategoryAndLevel(a: Question, b: Question): number {
+  if (a.category !== b.category) return a.category === 'Bíblia' ? -1 : 1;
+  const levelOrder: Record<Question['level'], number> = { 'Fácil': 0, 'Médio': 1, 'Difícil': 2 };
+  return levelOrder[a.level] - levelOrder[b.level];
+}
+
+export const questions: Question[] = rawQuestions
+  .slice()
+  .sort(sortByCategoryAndLevel)
+  .map((q, i) => ({ ...q, id: i + 1 }));

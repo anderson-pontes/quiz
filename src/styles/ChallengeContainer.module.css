@@ -51,6 +51,9 @@
 .promptEmoji {
   font-size: 2.5rem;
   margin-bottom: 24px;
+  min-height: 3rem;
+  line-height: 1.4;
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 .promptText {

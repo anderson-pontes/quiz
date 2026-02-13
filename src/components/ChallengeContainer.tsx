@@ -31,6 +31,13 @@ const ChallengeContainer: React.FC<ChallengeContainerProps> = ({ type, onExit })
   const currentChallenge: Challenge | undefined = availableChallenges[currentIndex];
   const totalChallenges = availableChallenges.length;
 
+  const handleExit = () => {
+    if (currentChallenge) {
+      markChallengeAsCompleted(currentChallenge.id);
+    }
+    onExit();
+  };
+
   const handleShowAnswer = () => {
     setShowAnswer(true);
   };
@@ -60,12 +67,16 @@ const ChallengeContainer: React.FC<ChallengeContainerProps> = ({ type, onExit })
 
   const getTitle = () => {
     if (type === 'emoji') return 'Desafios da Bíblia em Emoji';
+    if (type === 'mimica') return 'Mímica Bíblica';
     return 'Desafios de Hinos';
   };
 
   const getSubtitle = () => {
     if (type === 'emoji') {
       return 'Olhe para os emojis e tente adivinhar qual história bíblica eles representam!';
+    }
+    if (type === 'mimica') {
+      return 'Cada equipe representa histórias ou personagens da Bíblia sem falar; os colegas têm que adivinhar.';
     }
     return 'Leia o trecho ou instrução e complete o hino com o restante da letra, ou siga o desafio proposto.';
   };
@@ -78,7 +89,7 @@ const ChallengeContainer: React.FC<ChallengeContainerProps> = ({ type, onExit })
           <p className={styles.emptyText}>
             Não há desafios disponíveis deste tipo no momento.
           </p>
-          <button className={styles.submitBtn} onClick={onExit}>
+          <button className={styles.submitBtn} onClick={handleExit}>
             Voltar para Home
           </button>
         </div>
@@ -87,16 +98,17 @@ const ChallengeContainer: React.FC<ChallengeContainerProps> = ({ type, onExit })
   }
 
   const isEmoji = type === 'emoji';
+  const isMimica = type === 'mimica';
 
   return (
     <div className={styles.challengeContainer}>
       <header className={styles.header}>
         <span className={styles.typeBadge}>
-          {type === 'emoji' ? 'Emoji Bíblia' : 'Hinos'}
+          {type === 'emoji' ? 'Emoji Bíblia' : type === 'mimica' ? 'Mímica Bíblica' : 'Hinos'}
         </span>
         <button
           className={styles.exitBtn}
-          onClick={onExit}
+          onClick={handleExit}
           title="Sair dos desafios"
         >
           Sair
@@ -113,6 +125,11 @@ const ChallengeContainer: React.FC<ChallengeContainerProps> = ({ type, onExit })
 
         {isEmoji ? (
           <div className={styles.promptEmoji}>{currentChallenge.prompt}</div>
+        ) : isMimica ? (
+          <div className={styles.promptText}>
+            <strong>Represente (sem falar):</strong>
+            <div style={{ marginTop: 12, fontSize: '1.25rem' }}>{currentChallenge.prompt}</div>
+          </div>
         ) : (
           <div className={styles.promptText}>{currentChallenge.prompt}</div>
         )}

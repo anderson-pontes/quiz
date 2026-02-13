@@ -1,4 +1,4 @@
-export type ChallengeType = 'emoji' | 'hino';
+export type ChallengeType = 'emoji' | 'hino' | 'mimica';
 
 export interface Challenge {
   id: number;
@@ -95,7 +95,7 @@ export const challenges: Challenge[] = [
     id: 11,
     type: 'emoji',
     category: 'Bíblia',
-    prompt: '🪖🪨🧔‍♂️👑',
+    prompt: '👦⚔️👹👑',
     answer: 'Davi enfrentando o gigante Golias.',
     reference: '1 Samuel 17'
   },
@@ -135,7 +135,7 @@ export const challenges: Challenge[] = [
     id: 16,
     type: 'emoji',
     category: 'Bíblia',
-    prompt: '🛏️🧔‍♂️➡️🚶',
+    prompt: '🛏️👨➡️🚶',
     answer: 'Cura do paralítico que passou a andar.',
     reference: 'Marcos 2:1-12'
   },
@@ -202,6 +202,72 @@ export const challenges: Challenge[] = [
     answer:
       'Resposta livre – a equipe deve cantar um hino que contenha a expressão \"Estrela D\'alva\".',
     reference: 'Desafio de hino 6'
+  },
+
+  // Mímica Bíblica – representar histórias ou personagens sem falar
+  {
+    id: 201,
+    type: 'mimica',
+    category: 'Bíblia',
+    prompt: 'Jonas e a baleia',
+    answer: 'Jonas sendo lançado ao mar e engolido pelo grande peixe (baleia).',
+    reference: 'Jonas 1–2'
+  },
+  {
+    id: 202,
+    type: 'mimica',
+    category: 'Bíblia',
+    prompt: 'Davi e Golias',
+    answer: 'Davi (pequeno) enfrentando o gigante Golias com uma funda e uma pedra.',
+    reference: '1 Samuel 17'
+  },
+  {
+    id: 203,
+    type: 'mimica',
+    category: 'Bíblia',
+    prompt: 'Moisés abrindo o mar',
+    answer: 'Moisés estendendo a mão e o Mar Vermelho se abrindo para o povo passar.',
+    reference: 'Êxodo 14'
+  },
+  {
+    id: 204,
+    type: 'mimica',
+    category: 'Bíblia',
+    prompt: 'Sansão derrubando o templo',
+    answer: 'Sansão (com a força nos cabelos) entre as colunas do templo dos filisteus.',
+    reference: 'Juízes 16'
+  },
+  {
+    id: 205,
+    type: 'mimica',
+    category: 'Bíblia',
+    prompt: 'Daniel na cova dos leões',
+    answer: 'Daniel orando; leões ao redor; rei fechando a cova.',
+    reference: 'Daniel 6'
+  },
+  {
+    id: 206,
+    type: 'mimica',
+    category: 'Bíblia',
+    prompt: 'Noé e a arca',
+    answer: 'Noé construindo a arca, animais entrando dois a dois, chuva e dilúvio.',
+    reference: 'Gênesis 6–9'
+  },
+  {
+    id: 207,
+    type: 'mimica',
+    category: 'Bíblia',
+    prompt: 'Jesus andando sobre as águas',
+    answer: 'Jesus caminhando sobre o mar; discípulos no barco assustados.',
+    reference: 'Mateus 14:22-33'
+  },
+  {
+    id: 208,
+    type: 'mimica',
+    category: 'Bíblia',
+    prompt: 'A ressurreição de Jesus',
+    answer: 'Jesus saindo do túmulo; pedra removida; anjo ou mulheres no sepulcro.',
+    reference: 'Mateus 28'
   }
 ];
 

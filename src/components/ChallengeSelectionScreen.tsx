@@ -12,7 +12,7 @@ import {
 } from './Illustrations';
 
 interface ChallengeSelectionScreenProps {
-  onStartChallenge: (type: 'emoji' | 'hino') => void;
+  onStartChallenge: (type: 'emoji' | 'hino' | 'mimica') => void;
   onBackToHome: () => void;
 }
 
@@ -118,6 +118,21 @@ const ChallengeSelectionScreen: React.FC<ChallengeSelectionScreenProps> = ({
                 🎵🎤
               </span>
               <span>Desafios de Hinos</span>
+            </span>
+          </button>
+          <button
+            className={styles.selectionBtn}
+            onClick={() => onStartChallenge('mimica')}
+          >
+            <span className={styles.buttonContent}>
+              <span
+                role="img"
+                aria-label="Mímica Bíblica"
+                className={styles.categoryIcon}
+              >
+                🤫📖
+              </span>
+              <span>Mímica Bíblica</span>
             </span>
           </button>
         </div>
